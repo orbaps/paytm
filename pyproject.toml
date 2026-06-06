@@ -1,4 +1,0 @@
-[tool.vercel]
-# This is a frontend-only project deploying to Vercel
-# Backend deployed separately to Railway
-# Do not attempt to detect Python entrypoints

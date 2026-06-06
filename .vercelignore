@@ -1,29 +1,45 @@
 # Ignore all backend directories - these are deployed to Railway
-phase1
-phase2
-phase3
-phase4/backend
+/phase1/**
+/phase2/**
+/phase3/**
+/phase4/backend/**
 
-# Ignore backend/data directories
-data
-Docs
-scripts
-schemas
-reports
-src
-notebooks
-outputs
+# Ignore data and documentation directories
+/data/**
+/Docs/**
+/scripts/**
+/schemas/**
+/reports/**
+/src/**
+/notebooks/**
+/outputs/**
 
-# Ignore Python backend files (keeping frontend JS/Node files)
-phase1/backend
-phase2/backend
-phase3/backend
-phase4/backend
+# Ignore Python files everywhere
+*.py
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyx
+*.egg-info/**
+__pycache__/**
+.pytest_cache/**
 
-# Ignore git
-.git
-.gitignore
-
-# Ignore configuration files that aren't needed
+# Ignore Docker files (backend only)
 docker-compose.yml
-pytest.ini
+Dockerfile
+
+# Ignore git and other config files
+.git/**
+.gitignore
+.github/**
+.gitattributes
+
+# Ignore environment files
+.env
+.env.local
+.env.*.local
+.env.example
+
+# Note: phase4/frontend is NOT ignored and will be built
+
