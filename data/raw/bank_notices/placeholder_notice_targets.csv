@@ -1,0 +1,9 @@
+bank_name,announcement_date,maintenance_start,maintenance_end,description,source_url,notice_status
+State Bank of India,,,,"TODO: implement notice collection. Track UPI, mobile banking, and internet banking notices.",TODO: verify SBI digital banking maintenance notice URL,placeholder
+HDFC Bank,,,,TODO: implement notice collection. Track scheduled netbanking and UPI maintenance notices.,TODO: verify HDFC service outage or scheduled maintenance URL,placeholder
+ICICI Bank,,,,"TODO: implement notice collection. Track digital channels, cards, and UPI notices.",TODO: verify ICICI maintenance notice URL,placeholder
+Axis Bank,,,,"TODO: implement notice collection. Track UPI collect, app, and netbanking notices.",TODO: verify Axis Bank service notification URL,placeholder
+Kotak Mahindra Bank,,,,TODO: implement notice collection. Track core banking and mobile banking notices.,TODO: verify Kotak maintenance notice URL,placeholder
+Punjab National Bank,,,,TODO: implement notice collection. Track mobile banking and UPI availability notices.,TODO: verify PNB public notice URL,placeholder
+Bank of Baroda,,,,TODO: implement notice collection. Track UPI and digital banking notices.,TODO: verify Bank of Baroda maintenance notice URL,placeholder
+Canara Bank,,,,"TODO: implement notice collection. Track internet banking, mobile banking, and UPI notices.",TODO: verify Canara Bank public notice URL,placeholder

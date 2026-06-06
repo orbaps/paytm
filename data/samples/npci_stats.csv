@@ -1,0 +1,21 @@
+bank_name,report_month,technical_decline_rate,business_decline_rate,success_rate,total_transactions,source
+State Bank of India,2026-01,0.82,1.48,97.70,482000000,mock NPCI monthly bank statistics
+State Bank of India,2026-02,0.91,1.55,97.54,495000000,mock NPCI monthly bank statistics
+State Bank of India,2026-03,0.76,1.42,97.82,501000000,mock NPCI monthly bank statistics
+HDFC Bank,2026-01,0.64,1.22,98.14,372000000,mock NPCI monthly bank statistics
+HDFC Bank,2026-02,0.59,1.18,98.23,381000000,mock NPCI monthly bank statistics
+HDFC Bank,2026-03,0.71,1.31,97.98,389000000,mock NPCI monthly bank statistics
+ICICI Bank,2026-01,0.57,1.16,98.27,334000000,mock NPCI monthly bank statistics
+ICICI Bank,2026-02,0.62,1.21,98.17,341000000,mock NPCI monthly bank statistics
+ICICI Bank,2026-03,0.69,1.28,98.03,349000000,mock NPCI monthly bank statistics
+Axis Bank,2026-01,0.78,1.34,97.88,265000000,mock NPCI monthly bank statistics
+Axis Bank,2026-02,0.83,1.39,97.78,272000000,mock NPCI monthly bank statistics
+Axis Bank,2026-03,0.74,1.32,97.94,279000000,mock NPCI monthly bank statistics
+Kotak Mahindra Bank,2026-01,0.67,1.25,98.08,128000000,mock NPCI monthly bank statistics
+Kotak Mahindra Bank,2026-02,0.72,1.27,98.01,132000000,mock NPCI monthly bank statistics
+Punjab National Bank,2026-01,0.88,1.53,97.59,156000000,mock NPCI monthly bank statistics
+Punjab National Bank,2026-02,0.94,1.61,97.45,162000000,mock NPCI monthly bank statistics
+Bank of Baroda,2026-02,0.81,1.44,97.75,147000000,mock NPCI monthly bank statistics
+Bank of Baroda,2026-03,0.86,1.49,97.65,151000000,mock NPCI monthly bank statistics
+Canara Bank,2026-01,0.79,1.38,97.83,119000000,mock NPCI monthly bank statistics
+Canara Bank,2026-03,0.84,1.46,97.70,124000000,mock NPCI monthly bank statistics

@@ -1,0 +1,31 @@
+{
+  "dataset": "banks",
+  "description": "Reference list of banks monitored during Phase 0 research.",
+  "file": "banks.csv",
+  "primary_key": ["bank_name"],
+  "required": ["bank_name", "bank_type", "upi_enabled"],
+  "columns": {
+    "bank_name": {
+      "type": "string",
+      "description": "Official or commonly used bank name."
+    },
+    "bank_type": {
+      "type": "string",
+      "enum": ["public_sector", "private_sector", "payments_bank", "small_finance", "foreign_bank"],
+      "description": "High-level bank category used for research segmentation."
+    },
+    "upi_enabled": {
+      "type": "boolean",
+      "description": "Whether the bank is known to support UPI services."
+    },
+    "monitoring_priority": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "Research priority for outage and maintenance monitoring."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional research notes."
+    }
+  }
+}

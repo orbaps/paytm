@@ -1,0 +1,9 @@
+bank_name,incident_count,planned_count,unplanned_count,unknown_count
+State Bank of India,3,2,1,0
+HDFC Bank,3,1,2,0
+ICICI Bank,3,2,1,0
+Axis Bank,3,2,1,0
+Kotak Mahindra Bank,2,1,1,0
+Punjab National Bank,2,1,1,0
+Bank of Baroda,2,1,1,0
+Canara Bank,2,1,1,0

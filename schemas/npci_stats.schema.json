@@ -1,0 +1,53 @@
+{
+  "dataset": "npci_stats",
+  "description": "Monthly NPCI or NPCI-like bank performance metrics collected for Phase 0 validation.",
+  "file": "npci_stats.csv",
+  "primary_key": ["bank_name", "report_month"],
+  "required": [
+    "bank_name",
+    "report_month",
+    "technical_decline_rate",
+    "business_decline_rate",
+    "success_rate",
+    "total_transactions",
+    "source"
+  ],
+  "columns": {
+    "bank_name": {
+      "type": "string",
+      "description": "Bank represented in the statistics."
+    },
+    "report_month": {
+      "type": "month",
+      "format": "YYYY-MM",
+      "description": "Reporting month for the metric row."
+    },
+    "technical_decline_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Technical decline rate as a percentage."
+    },
+    "business_decline_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Business decline rate as a percentage."
+    },
+    "success_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Transaction success rate as a percentage."
+    },
+    "total_transactions": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Monthly transaction count represented by the row."
+    },
+    "source": {
+      "type": "string",
+      "description": "Published source or research source for the metric."
+    }
+  }
+}

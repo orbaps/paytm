@@ -1,0 +1,9 @@
+bank_name,bank_type,upi_enabled,monitoring_priority,notes
+State Bank of India,public_sector,true,high,Largest public sector UPI participant in sample
+HDFC Bank,private_sector,true,high,High-volume private bank
+ICICI Bank,private_sector,true,high,High-volume private bank
+Axis Bank,private_sector,true,high,High-volume private bank
+Kotak Mahindra Bank,private_sector,true,medium,Private bank with recurring maintenance observations
+Punjab National Bank,public_sector,true,medium,Public sector bank monitored for scheduled windows
+Bank of Baroda,public_sector,true,medium,Public sector bank monitored for UPI availability
+Canara Bank,public_sector,true,medium,Public sector bank monitored for mobile and UPI downtime

@@ -1,0 +1,59 @@
+{
+  "dataset": "outages",
+  "description": "Observed bank outage and degraded-service incidents collected for Phase 0 research.",
+  "file": "outages.csv",
+  "primary_key": ["bank_name", "incident_date", "start_time", "source"],
+  "required": [
+    "bank_name",
+    "incident_date",
+    "start_time",
+    "end_time",
+    "duration_minutes",
+    "planned_or_unplanned",
+    "source"
+  ],
+  "columns": {
+    "bank_name": {
+      "type": "string",
+      "description": "Bank affected by the outage."
+    },
+    "incident_date": {
+      "type": "date",
+      "format": "YYYY-MM-DD",
+      "description": "Calendar date when the outage started."
+    },
+    "start_time": {
+      "type": "time",
+      "format": "HH:MM",
+      "description": "Local start time in 24-hour format."
+    },
+    "end_time": {
+      "type": "time",
+      "format": "HH:MM",
+      "description": "Local end time in 24-hour format."
+    },
+    "duration_minutes": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Outage duration in minutes."
+    },
+    "planned_or_unplanned": {
+      "type": "string",
+      "enum": ["planned", "unplanned", "unknown"],
+      "description": "Whether the incident was scheduled maintenance or unexpected downtime."
+    },
+    "source": {
+      "type": "string",
+      "description": "Research source such as bank notice, NPCI report, operations note, or news report."
+    },
+    "impact_area": {
+      "type": "string",
+      "enum": ["upi", "netbanking", "cards", "mobile_banking", "multiple", "unknown"],
+      "description": "Payment or banking surface affected by the incident."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional analyst notes."
+    }
+  }
+}

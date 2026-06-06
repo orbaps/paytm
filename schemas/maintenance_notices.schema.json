@@ -1,0 +1,47 @@
+{
+  "dataset": "maintenance_notices",
+  "description": "Bank-published maintenance notices collected during Phase 0 research.",
+  "file": "maintenance_notices.csv",
+  "primary_key": ["bank_name", "announcement_date", "maintenance_start"],
+  "required": [
+    "bank_name",
+    "announcement_date",
+    "maintenance_start",
+    "maintenance_end",
+    "description"
+  ],
+  "columns": {
+    "bank_name": {
+      "type": "string",
+      "description": "Bank that published the maintenance notice."
+    },
+    "announcement_date": {
+      "type": "date",
+      "format": "YYYY-MM-DD",
+      "description": "Date when the maintenance was announced."
+    },
+    "maintenance_start": {
+      "type": "datetime",
+      "format": "YYYY-MM-DD HH:MM",
+      "description": "Scheduled maintenance start timestamp."
+    },
+    "maintenance_end": {
+      "type": "datetime",
+      "format": "YYYY-MM-DD HH:MM",
+      "description": "Scheduled maintenance end timestamp."
+    },
+    "description": {
+      "type": "string",
+      "description": "Text summary of the maintenance notice."
+    },
+    "source_url": {
+      "type": "string",
+      "description": "URL where the notice was found, when available."
+    },
+    "notice_status": {
+      "type": "string",
+      "enum": ["observed", "placeholder", "archived"],
+      "description": "Collection status for the notice."
+    }
+  }
+}

@@ -1,0 +1,3 @@
+planned_or_unplanned,incident_count,incident_percentage,total_duration_minutes,duration_percentage
+planned,11,55.0,845,67.33
+unplanned,9,45.0,410,32.67

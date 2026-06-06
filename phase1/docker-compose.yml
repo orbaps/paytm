@@ -1,0 +1,56 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: paytm_phase1_postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-paytm_smart_reserve}
+      POSTGRES_USER: ${POSTGRES_USER:-paytm}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-paytm}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-paytm} -d ${POSTGRES_DB:-paytm_smart_reserve}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+    container_name: paytm_phase1_backend
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      DEBUG: ${DEBUG:-true}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://paytm:paytm@postgres:5432/paytm_smart_reserve}
+      AUTO_CREATE_TABLES: ${AUTO_CREATE_TABLES:-true}
+      API_BASIC_AUTH_ENABLED: ${API_BASIC_AUTH_ENABLED:-true}
+      API_USERNAME: ${API_USERNAME:-admin}
+      API_PASSWORD: ${API_PASSWORD:-admin123}
+      RATE_LIMIT_ENABLED: ${RATE_LIMIT_ENABLED:-true}
+      RATE_LIMIT_REQUESTS: ${RATE_LIMIT_REQUESTS:-120}
+      RATE_LIMIT_WINDOW_SECONDS: ${RATE_LIMIT_WINDOW_SECONDS:-60}
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8000/api}
+        VITE_API_USERNAME: ${VITE_API_USERNAME:-admin}
+        VITE_API_PASSWORD: ${VITE_API_PASSWORD:-admin123}
+    container_name: paytm_phase1_frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

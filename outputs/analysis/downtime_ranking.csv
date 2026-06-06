@@ -1,0 +1,9 @@
+rank,bank_name,incident_count,total_downtime_minutes,average_duration_minutes,planned_count,unplanned_count,unknown_count
+1,State Bank of India,3,225,75,2,1,0
+2,Axis Bank,3,200,66.67,2,1,0
+3,HDFC Bank,3,160,53.33,1,2,0
+4,ICICI Bank,3,155,51.67,2,1,0
+5,Bank of Baroda,2,145,72.5,1,1,0
+6,Punjab National Bank,2,140,70,1,1,0
+7,Kotak Mahindra Bank,2,125,62.5,1,1,0
+8,Canara Bank,2,105,52.5,1,1,0

@@ -1,0 +1,2 @@
+bank_name,incident_date,start_time,end_time,duration_minutes,planned_or_unplanned,source,impact_area,notes
+HDFC Bank,2026-05-18,21:40,22:10,30,unplanned,manual QA smoke test,upi,Smoke-test manual entry row
