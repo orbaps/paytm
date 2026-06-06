@@ -1,9 +1,6 @@
 {
   "buildCommand": "cd phase4/frontend && npm run build",
   "outputDirectory": "phase4/frontend/dist",
-  "env": {
-    "VITE_API_URL": "@vite_api_url"
-  },
   "rewrites": [
     {
       "source": "/(.*)",
