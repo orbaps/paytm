@@ -4,18 +4,10 @@
   "env": {
     "VITE_API_URL": "@vite_api_url"
   },
-  "envPrefix": "VITE_",
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/index.html",
-      "permanent": false
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "regions": ["iad1"]
